@@ -24,7 +24,7 @@ while (exibirMenu)
 {
     Console.Clear();
     Console.WriteLine("Digite a sua opção:");
-    Console.WriteLine("1 - Cadastrar veículo");
+    Console.WriteLine("1 - Adicionar veículo");
     Console.WriteLine("2 - Remover veículo");
     Console.WriteLine("3 - Listar veículos");
     Console.WriteLine("4 - Encerrar");
@@ -33,18 +33,23 @@ while (exibirMenu)
     {
         case "1":
             es.AdicionarVeiculo();
+            Console.WriteLine("Veículo adicionado.");
             break;
 
         case "2":
             es.RemoverVeiculo();
+            Console.WriteLine("Veículo removido com sucesso.");
             break;
 
         case "3":
             es.ListarVeiculos();
+            Console.WriteLine("Essa é a lista de todos os veículos estacionados.");
             break;
 
         case "4":
             exibirMenu = false;
+            Console.WriteLine("Obrigado por utilizar nossos serviços.");
+            Environment.Exit(exitCode: 0);
             break;
 
         default:
@@ -55,5 +60,3 @@ while (exibirMenu)
     Console.WriteLine("Pressione uma tecla para continuar");
     Console.ReadLine();
 }
-
-Console.WriteLine("O programa se encerrou");
